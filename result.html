@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<style>
+th,td{
+    text-align: left;
+}
+
+</style>
+<body>
+
+<a href="http://localhost:8080/main">Back</a>
+<h2>I had  {{len(MessageList)}}  email.</h2>
+
+<form name="Gmail" method="POST" action="/delete">
+    <input type="submit" value="Delete" />
+</form>
+
+<table>
+
+    %if len(MessageList) > 0:
+        <tr><th style="display:none;">id</th><th>Date</th><th>From</th><th>Subject</th></tr> 
+    %end 
+    %for Message in MessageList:
+        <tr>
+            <td style="display:none;">{{Message["ID"]}}</td>
+            <td>{{Message["Date"]}}</td>
+            <td>{{Message["From"]}}</td>
+            <td>{{Message["Subject"]}}</td>
+        </tr>
+    %end
+    </table>
+</body>
+</html>
+
