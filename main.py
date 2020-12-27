@@ -3,25 +3,29 @@ from GmailAPI import GmailAPI
 
 @route('/main')
 def main():
-    MessageList = []
-    return template("search", MessageList=MessageList)
+    return template("search")
 
-@route('/get', method=['GET','POST'])
+@route('/run', method=['GET','POST'])
 def get_massage(): 
     Gmail = GmailAPI()
+    mode= request.forms.get("mode")
     DateFrom= request.forms.get("DateFrom")
     DateTo= request.forms.get("DateTo")
     MessageFrom= request.forms.get("From")
-    if Gmail.GetMessageList(DateFrom=DateFrom,DateTo=DateTo,MessageFrom=None) == False:
-        return 'error'
-    return template("result", MessageList=Gmail.MessageList)
-
-@route('/delete', method=['GET','POST'])
-def delete():
-
-    Gmail = GmailAPI()
-    MessageList = request.body
-    num = Gmail.DeleteMessageList(MessageList=MessageList)
-    return template("delete", result=num)
+    if mode == "modify":
+        print(mode)
+        print(DateFrom)
+        print(DateTo)
+        print(MessageFrom)
+        # if Gmail.ModifyUnreadMessageList(DateFrom=DateFrom,DateTo=DateTo,MessageFrom=MessageFrom) == False:
+        #    return 'error'
+    else:
+        print(mode)
+        print(DateFrom)
+        print(DateTo)
+        print(MessageFrom)
+        # if Gmail.DeleteMessageList(DateFrom=DateFrom,DateTo=DateTo,MessageFrom=MessageFrom) == False:
+        #    return 'error'
+    return template("result")
 
 run(host='localhost', port=8080)

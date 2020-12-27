@@ -10,11 +10,15 @@ th,td{
 
 <h1>Gmail Search</h1>
 
-<form name="Gmail" method="POST" action="/get">
-    <input type="Date" name="DateFrom" value="2018-01-01" />
-    <input type="Date" name="DateTo" value="2018-01-02" />
-    <input type="mail" name="From" value="" />
-    <input type="submit" value="Search" />
+<form name="Gmail" method="POST" action="/run">
+    <input type="radio" id="delete" name="mode" value="delete">
+    <label for="male">Delete</label><br>
+    <input type="radio" id="modify" name="mode" value="modify">
+    <label for="female">Modify from unread to read</label><br>
+    <div>DatefFom<input type="Date" name="DateFrom" value="2018-01-01"></div>
+    <div>DateTrom<input type="Date" name="DateTo" value="2018-01-02"></div>
+    <div>FromAddress<input type="mail" name="From" value=""></div>
+    <input type="submit" value="Run" />
 </form>
 
 </body>

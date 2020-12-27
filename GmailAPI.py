@@ -66,7 +66,7 @@ class GmailAPI:
             
             query = ''
             # Set query parameter
-            query += 'is:unread ' #未読のみ
+            query += 'is:unread ' 
             if DateFrom != None and DateFrom !="":
                 query += 'after:' + DateFrom + ' '
             if DateTo != None  and DateTo !="":
