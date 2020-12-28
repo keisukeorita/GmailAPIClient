@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Gmail Client</title>
+    <link rel="stylesheet" href="/static/css/site.css" type="text/css" />
+</head>
+
+<body>
+
+<h1>Gmail Client</h1>
+<form name="Gmail" method="POST" action="/run">
+    <div>
+        <label class="title" for="mode">Mode:</label>
+        <label class="radio" for="modify"><input type="radio" id="modify" name="mode" value="modify" checked>Modify from unread to read</label>
+        <label class="radio" for="delete"><input type="radio" id="delete" name="mode" value="delete">Delete</label>
+    </div>
+    <div class="group">
+        <label class="title" for="DateFrom">DateFrom:</label>
+        <input type="Date" name="DateFrom">
+    </div>
+    <div class="group">
+        <label class="title" for="DateTo">DateTo:</label>
+        <input type="Date" name="DateTo">
+    </div>
+    <div class="group">
+        <label class="title" for="MessageFrom">MessageFrom:</label>
+        <input type="mail" name="MessageFrom" value="">
+    </div>
+    <input class="button" type="submit" value="Run" />
+</form>
+
+</body>
+</html>
+
+

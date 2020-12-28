@@ -1,0 +1,52 @@
+form{
+	width:500px;
+    padding-top: 0px;
+    padding-right: 30px;
+    padding-bottom: 0px;
+    padding-left: 30px;
+}
+
+label.title  {  
+    margin: 5px 0px;
+    display:block;
+    font-size: 18px;
+}
+label.radio  {  
+    display:block;
+    font-size: 16px;
+}
+
+.group input label{
+    display:block;
+}
+
+.button {
+    background-color: #1a7edb;
+    border: none;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 12px;
+    margin: 10px 0px;
+  }
+  input[type=date] {
+    width: 40%;
+    padding: 4px 16px;
+    margin: 8px 0 ;
+    box-sizing: border-box;
+    border: 2px solid grey;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  input[type=mail] {
+    width: 80%;
+    padding: 5px 16px;
+    margin: 8px 0 ;
+    box-sizing: border-box;
+    border: 2px solid grey;
+    border-radius: 4px;
+    font-size: 16px;
+  }
